@@ -65,7 +65,7 @@ useEffect(() => {
       <div>
         {imageURL && <img src={imageURL} alt="Uploaded" style={{ maxWidth: '400px' }} />}
       </div>
-      {predictions.length !== 0 && <div>{predictions[0].className} : {Math.round(((Math.random() * 0.1 + 0.8) * 100))}%</div>}
+      {predictions.length !== 0 && <div>{predictions[0].className} : {Math.round(prediction.probability * 100)}%</div>}
     </div>
   );
 }
